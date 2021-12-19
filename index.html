@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <table class="table table-primary" id="tbl">
+        <thead>
+            <!-- <tr>
+                <th rowspan="2">#</th>
+                <th rowspan="2">Origin</th>
+                <th rowspan="2">Destination</th>
+                <th colspan="3" data-propName="EmbDetails">Pax Details</th>
+                <th rowspan="2"  data-propName="CrgDetails.Cargo" data-valType="collection:float">Cargo</th>
+                <th rowspan="2" data-propName="CrgDetails.Mail" data-valType="collection:float">Mail</th>
+            </tr>
+            <tr>
+                <th data-propName="EmbDetails.Adlts" data-valType="int">Adults</th>
+                <th data-propName="EmbDetails.Infs" data-valType="int">Infants</th>
+                <th data-propName="EmbDetails.Dips" data-valType="int">Dips</th>
+            </tr> -->
+            
+            <tr>
+                <th>#</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th data-propName="EmbDetails.Adlts" data-valType="collection:int">Adults</th>
+                <th data-propName="EmbDetails.Infs" data-valType="collection:int">Infants</th>
+                <th data-propName="EmbDetails.Dips" data-valType="collection:int">Dips</th>
+                <th data-propName="CrgDetails.Cargo" data-valType="collection:float">Cargo</th>
+                <th data-propName="CrgDetails.Mail" data-valType="collection:float">Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Karachi</td>
+                <td>Istanbol</td>
+                <td>140</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0.0</td>
+                <td>125.50</td>
+            </tr>
+            <tr>
+                <td rowspan="3">2</td>
+                <td rowspan="3">Istanbol</td>
+                <td rowspan="3">Karachi</td>
+                <td>141</td>
+                <td>0</td>
+                <td>0</td>
+                <td rowspan="3">0.0</td>
+                <td rowspan="3">125.50</td>
+            </tr>
+            <tr>
+                <td>142</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>143</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Karachi</td>
+                <td>Istanbol</td>
+                <td>144</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0.0</td>
+                <td>125.50</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">Istanbol</td>
+                <td rowspan="2">Karachi</td>
+                <td>145</td>
+                <td>0</td>
+                <td>0</td>
+                <td rowspan="2">0.0</td>
+                <td rowspan="2">125.50</td>
+            </tr>
+            <tr>
+                <td>146</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="lib/tblToJSON/tblToJSON-cell.js"></script>
+    <script src="lib/tblToJSON/tblToJSON-row"></script>
+    <script src="lib/tblToJSON/tblToJSON.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var values = $('#tbl').tblToJSON({ignoreColumns:[0]});
+            console.log(values);
+        });
+    </script>
+</body>
+
+</html>
